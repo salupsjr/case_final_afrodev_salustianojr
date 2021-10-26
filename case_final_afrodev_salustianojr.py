@@ -10,14 +10,16 @@ from conteudo import (entrada, total_de_atletas_participantes,total_participante
 
 escolha = "S" # Variável escolha já se inicia com [S](Sim) para o teste do while.
 
-while escolha in "sS": # Enquanto S(Sim) ou s for o conteúdo de escolha
+while escolha in "sS": # Enquanto S(Sim) ou s for o conteúdo de escolha.
     
     entrada() # É chamado o método entrada() que mostra as opções a serem escolhidas. 
     
+    
     opção = int(input("ESCOLHA UMA DAS OPÇÕES ACIMA: ")) # Variável para receber opção escolhida.
     
+    
     if opção == 1: # Se opção escolhida for igual a 1... 
-        total_de_atletas_participantes() # É chamado método para tratameto do processo.
+        total_de_atletas_participantes() # É chamada do método para tratameto do processo.
     elif opção == 2: # Se opção escolhida for igual a 2... 
         total_participantes_homens()
     elif opção == 3: # Se opção escolhida for igual a 3... 
@@ -54,10 +56,10 @@ while escolha in "sS": # Enquanto S(Sim) ou s for o conteúdo de escolha
         treinadores_esportes()
     elif opção == 19: # Se opção escolhida for igual a 19... 
         times_por_esportes()
-    else:
+    else: # Caso a opção escolhida não seja de 1 a 19 mostra a mensagem. 
         print("\nESTÁ OPÇÃO NÃO ESTÁ DISPONÍVEL.")
         
-    escolha = input("\nDeseja continuar? [S/N]: ").strip()[0]
+    escolha = input("\nDeseja continuar? [S/N]: ").strip()[0] # Pergunta se usuário deseja continuar consulta.
     
 print("\nFINALIZADO COM SUCESSO.")
     
