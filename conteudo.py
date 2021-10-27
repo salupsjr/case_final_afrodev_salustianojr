@@ -1,7 +1,7 @@
 from dataframes import Athletes,Coaches, EntriesGender, Medals, Teams
 def opcoes():
     print("="*104)
-    print("ANÁLISES OLIMPÍADAS 2021".center(104))
+    print("ANÁLISES SOBRE AS OLIMPÍADAS 2021".center(104))
     print("="*104)
     print("\nESCOLHA A OPÇÃO DESEJADA PARA CONSULTA".center(104))
     print("""
