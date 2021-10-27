@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Importação dos módulos
-from conteudo import (entrada, total_de_atletas_participantes,total_participantes_homens, 
+from conteudo import (opcoes, total_de_atletas_participantes,total_participantes_homens, 
                       total_participantes_mulheres, total_participantes_mulheres, 
                       total_participantes_por_esportes, total_medalhas_pais,
                       rank_medalhas_totais, mais_ouros, mais_prata, mais_bronze, menos_ouro,
@@ -12,7 +12,7 @@ escolha = "S" # Variável escolha já se inicia com [S](Sim) para o teste do whi
 
 while escolha in "sS": # Enquanto S(Sim) ou s for o conteúdo de escolha.
     
-    entrada() # É chamado o método entrada() que mostra as opções a serem escolhidas. 
+    opcoes() # É chamado o método entrada() que mostra as opções a serem escolhidas. 
     
     
     opção = int(input("ESCOLHA UMA DAS OPÇÕES ACIMA: ")) # Variável para receber opção escolhida.
@@ -61,5 +61,5 @@ while escolha in "sS": # Enquanto S(Sim) ou s for o conteúdo de escolha.
         
     escolha = input("\nDeseja continuar? [S/N]: ").strip()[0] # Pergunta se usuário deseja continuar consulta.
     
-print("\nFINALIZADO COM SUCESSO.")
+print("\nANÁLISE FINALIZADA COM SUCESSO.")
     

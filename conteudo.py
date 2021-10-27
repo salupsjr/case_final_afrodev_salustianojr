@@ -1,10 +1,10 @@
 from dataframes import Athletes,Coaches, EntriesGender, Medals, Teams
-def entrada():
-    print("="*40)
-    print("OLIMPÍADAS 2021".center(40))
-    print("="*40)
+def opcoes():
+    print("="*104)
+    print("ANÁLISES OLIMPÍADAS 2021".center(104))
+    print("="*104)
+    print("\nESCOLHA A OPÇÃO DESEJADA PARA CONSULTA".center(104))
     print("""
-ESCOLHA A OPÇÃO DESEJADA PARA CONSULTA
 [1]  Total de atletas participantes.                 [2]  Total de participantes homens.
 [3]  Total de participantes mulheres.                [4]  Total de participantes por esporte.
 [5]  Total de medalhas por país.                     [6]  Ranking por medalhas totais.
@@ -19,7 +19,7 @@ ESCOLHA A OPÇÃO DESEJADA PARA CONSULTA
 
 def total_de_atletas_participantes():
     # Total de atletas participantes. 1
-    #total_participantes = Athletes.shape[0] # Pega o DataFrame que retorna uma tupla com a quantidade de linhas[0] x colunas[1].
+    total_participantes = Athletes.shape[0] # Pega o DataFrame que retorna uma tupla com a quantidade de linhas[0] x colunas[1].
     EntriesGender["Total Athletes"] = EntriesGender["Male"].sum() + EntriesGender["Female"].sum() # Criação de uma coluna no DataFrame que recebe a soma da soma das colunas.
     total_participantes = EntriesGender["Total Athletes"][0]
     print(f"\nO total de atletas participantes nessa olimpíada é de {total_participantes} atletas.") # É mostrado mensagem com a quantidades de atletas participantes obtido pelo DataFrame.
@@ -136,6 +136,9 @@ def treinadores_esportes():
     
 def times_por_esportes():
     # Quantos times por esporte cada país tem. 19
-    times = Teams.groupby(by=["NOC", "Discipline"])["Discipline"].count()
+    times = Teams.groupby(by=["NOC", "Discipline"])["Event"].count() # DataFrame agrupa por pais e esporte e realiza a contagem por times.
     print(f"\n{times}")
+ 
+ 
+   
         
